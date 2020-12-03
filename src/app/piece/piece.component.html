@@ -1,0 +1,8 @@
+<div class="piece">
+    <mat-grid-list [cols]="dim.w +1" [rowHeight]="440/(dim.h+1)">
+        <mat-grid-tile class="spot" *ngFor="let c of spots" [colspan]="1" style="background-color: lightblue;">
+            <app-aspirateur [dir]="coordinates.d" *ngIf="c.x === coordinates.x && c.y === coordinates.y">
+            </app-aspirateur>
+        </mat-grid-tile>
+    </mat-grid-list>
+</div>
